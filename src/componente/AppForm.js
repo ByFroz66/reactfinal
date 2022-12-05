@@ -27,13 +27,13 @@ const AppForm = (props) => {
                 if(validarForm()){                    //Validar
                     addDoc(collection(db, 'persona'), objeto);      //CREAR
                     //console.log('Se guardó...');      //Msj
-                    toast("se GUARDO con exito...", {
+                    toast("SE GUARDO CON EXITO...", {
                         type:'success',
                         autoClose: 2000
                     })
                     //props.fnRead();  //No es necesario se cambio fn en useEffect
                 }else{
-                    console.log('NO se guardó...');
+                    console.log('NO SE GUARDO...');
                 }
             }else{
                 ////////// ACTUALIZAR //////////////////////////////////////////
@@ -56,7 +56,7 @@ const AppForm = (props) => {
     const validarForm = () => {
         if(objeto.nombre==="" || /^\s+$/.test(objeto.nombre)){
             //alert("Escriba nombres...");
-            toast("Escriba nombre...", {
+            toast("Escriba su nombre...", {
                 type:'warning',
                 autoClose: 2000
             })
